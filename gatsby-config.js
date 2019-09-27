@@ -27,8 +27,23 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // This type will contain remote schema Query type
+        typeName: "AuthApi",
+        // This is field under which it's accessible
+        fieldName: "API",
+        // Url to query from
+        url: `http://localhost:5000/graphql`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-apollo",
+      options: {
+        uri: `http://localhost:5000/graphql`,
+      },
+    },
+    `gatsby-plugin-typescript`,
   ],
 }
