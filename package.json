@@ -6,6 +6,8 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@apollo/react-hooks": "^3.1.1",
+    "@types/query-string": "^6.3.0",
+    "@types/react-redux": "^7.1.4",
     "apollo-boost": "^0.4.4",
     "apollo-client": "^2.6.4",
     "bootstrap": "^4.3.1",
@@ -24,7 +26,8 @@
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-redux": "^7.1.1"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
@@ -39,7 +42,8 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
+    "type-check": "tsc -w"
   },
   "repository": {
     "type": "git",

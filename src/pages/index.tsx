@@ -1,11 +1,10 @@
-import React, {useEffect} from 'react'
-import {navigate} from 'gatsby'
+import { useEffect } from "react"
+import { navigate } from "gatsby"
 
 export default () => {
+  useEffect(() => {
+    navigate("/login")
+  }, [])
 
-    useEffect(() => {
-        navigate('/login')
-    }, [])
-
-    return null
+  return null
 }
