@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -35,13 +39,13 @@ module.exports = {
         // This is field under which it's accessible
         fieldName: "API",
         // Url to query from
-        url: `http://localhost:5000/graphql`,
+        url: `${process.env.API_URL}/graphql,
       },
     },
     {
       resolve: "gatsby-plugin-apollo",
       options: {
-        uri: `http://localhost:5000/graphql`,
+        uri: `${process.env.API_URL}/graphql,
       },
     },
     `gatsby-plugin-typescript`,
