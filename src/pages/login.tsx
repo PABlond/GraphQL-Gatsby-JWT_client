@@ -3,6 +3,7 @@ import { Container, Form, Button } from "react-bootstrap"
 import HandleLogin from "./../components/Auth/HandleLogin"
 import { LoginForm } from "./../interfaces/auth.interface"
 import Nav from "./../components/Navs"
+import 'bootstrap/dist/css/bootstrap.css';
 
 export default () => {
   const [loginReq, setLoginReq] = useState<boolean>(false)
@@ -33,7 +34,7 @@ export default () => {
       <Container id="auth-container">
         <Form onSubmit={onSubmit}>
           <div id="auth-heading">
-            <h1>Login to KBoard</h1>
+            <h1>Login to Auth</h1>
             <a href="/signup">or create an account</a>
           </div>
           <Form.Group controlId="formBasicEmail">

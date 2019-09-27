@@ -22,6 +22,7 @@ const SIGNUP_REQ = gql`
     }
 `
 export default ({ firstname, lastname, email, password }: SignupForm) => {
+    console.log({ firstname, lastname, email, password })
     const { loading, error, data } = useQuery(SIGNUP_REQ, {
         variables: { firstname, lastname, email, password },
     })

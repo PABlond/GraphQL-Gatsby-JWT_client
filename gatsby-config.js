@@ -39,13 +39,13 @@ module.exports = {
         // This is field under which it's accessible
         fieldName: "API",
         // Url to query from
-        url: `${process.env.API_URL}/graphql,
+        url: `${process.env.API_URL}/graphql`,
       },
     },
     {
       resolve: "gatsby-plugin-apollo",
       options: {
-        uri: `${process.env.API_URL}/graphql,
+        uri: `${process.env.API_URL}/graphql`,
       },
     },
     `gatsby-plugin-typescript`,
