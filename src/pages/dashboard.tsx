@@ -6,12 +6,12 @@ import Loading from "./../components/Loading"
 import { connect } from "react-redux"
 import { Container, Button } from "react-bootstrap"
 import { logout } from "./../actions/auth"
+import { IUser } from "./../interfaces/redux.interface"
 
-const Dashboard = ({ user }) => {
+const Dashboard = ({ user }: { user: IUser }) => {
   const [loading, setLoading] = useState<Boolean>(true)
 
   useEffect(() => {
-    console.log(store.getState())
     const { firstname, lastname, email } = store.getState().user
     if (email && firstname && lastname) setLoading(false)
   }, [user])
