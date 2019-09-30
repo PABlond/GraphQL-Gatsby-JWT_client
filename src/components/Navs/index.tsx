@@ -5,7 +5,7 @@ import { navigate } from "gatsby"
 export default () => {
   return (
     <Navbar collapseOnSelect expand="lg" id="nav"  fixed="top">
-      <Navbar.Brand className="text-light" href="#home">Auth</Navbar.Brand>
+      <Navbar.Brand className="text-light" href="/">Auth</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav

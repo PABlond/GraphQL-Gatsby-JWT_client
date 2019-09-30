@@ -1,4 +1,4 @@
-import React, { useState, SyntheticEvent } from "react"
+import React, { useState, useEffect, SyntheticEvent } from "react"
 import { Container, Form, Button } from "react-bootstrap"
 import HandleSignup from "./../components/Auth/HandleSignup"
 import { SignupForm } from "./../interfaces/auth.interface"

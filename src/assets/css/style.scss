@@ -2,6 +2,8 @@ $dark: #23374d;
 $light: #fff;
 $blue: #1089ff;
 
+$break-medium: 768px;
+
 #dropdown-basic::after {
   content: none !important;
 }
@@ -22,6 +24,10 @@ body {
 // ****************************************
 
 #nav {
+  background: $dark !important;
+  .navbar-toggler {
+    background: $light;
+  }
   .navbar-nav {
     .nav-item {
       a {
@@ -56,11 +62,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (min-width: $break-medium) {
+    form {
+      width: 80%;
+    }
+  }
 
   form {
     background: $light;
-    width: 80%;
     padding: 3rem;
+    border-radius: 15px;
 
     #auth-heading {
       padding-bottom: 1rem;
