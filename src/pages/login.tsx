@@ -45,6 +45,7 @@ export default () => {
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control
+              required
               type="email"
               name="email"
               placeholder="Enter email"
@@ -55,6 +56,7 @@ export default () => {
           <Form.Group controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control
+              required
               type="password"
               name="password"
               placeholder="Password"

@@ -49,6 +49,7 @@ export default () => {
           <Form.Group controlId="formBasicPassword">
             <Form.Label>Firstname</Form.Label>
             <Form.Control
+              required
               type="text"
               name="firstname"
               placeholder="John"
@@ -59,6 +60,7 @@ export default () => {
           <Form.Group controlId="formBasicPassword">
             <Form.Label>Lastname</Form.Label>
             <Form.Control
+              required
               type="text"
               name="lastname"
               placeholder="Doe"
@@ -69,6 +71,7 @@ export default () => {
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control
+              required
               type="email"
               name="email"
               placeholder="john.doe@example.net"
@@ -79,6 +82,7 @@ export default () => {
           <Form.Group controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control
+              required
               type="password"
               name="password"
               placeholder="********"
