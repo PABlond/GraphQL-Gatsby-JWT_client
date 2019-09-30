@@ -4,7 +4,8 @@ import "bootstrap/dist/css/bootstrap.css"
 import store from "./../store"
 import Loading from "./../components/Loading"
 import { connect } from "react-redux"
-import { Container } from "react-bootstrap"
+import { Container, Button } from "react-bootstrap"
+import { logout } from "./../actions/auth"
 
 const Dashboard = ({ user }) => {
   const [loading, setLoading] = useState<Boolean>(true)
@@ -24,6 +25,7 @@ const Dashboard = ({ user }) => {
             <p className="text-info">
               Welcome back {user.firstname} {user.lastname} !
             </p>
+            <Button onClick={logout}>Logout</Button>
           </>
         ) : (
           <Loading />
