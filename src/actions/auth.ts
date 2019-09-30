@@ -4,14 +4,14 @@ const isBrowser = typeof window !== `undefined`
 
 export const getUser = () => {
     if (isBrowser) {
-        return window.localStorage.getItem('babycam')
-            ? (window.localStorage.getItem('babycam') as String)
+        return window.localStorage.getItem('pablond-auth')
+            ? (window.localStorage.getItem('pablond-auth') as String)
             : ''
     }
     return ''
 }
 
-export const setUser = (token: string) => window.localStorage.setItem('babycam', token)
+export const setUser = (token: string) => window.localStorage.setItem('pablond-auth', token)
 
 export const handleLogin = (token: string): Boolean => {
     if (!isBrowser) return false
@@ -30,6 +30,6 @@ export const isLoggedIn = () => {
 export const getCurrentUser = () => isBrowser && getUser()
 
 export const logout = () => {
-    window.localStorage.removeItem('babycam')
+    window.localStorage.removeItem('pablond-auth')
     navigate('/')
 }

@@ -3,7 +3,8 @@ import { Container, Form, Button } from "react-bootstrap"
 import HandleSignup from "./../components/Auth/HandleSignup"
 import { SignupForm } from "./../interfaces/auth.interface"
 import Nav from "./../components/Navs"
-import "bootstrap/dist/css/bootstrap.css"
+import { isLoggedIn } from "./../actions/auth"
+import { navigate } from "gatsby"
 
 export default () => {
   const [signupReq, setsignupReq] = useState<boolean>(false)
@@ -29,7 +30,11 @@ export default () => {
 
   const { firstname, lastname, email, password } = form
   const props = { firstname, lastname, email, password }
-  console.log(props)
+
+  useEffect(() => {
+    if (isLoggedIn()) navigate("/dashboard")
+  }, [])
+
   return (
     <>
       <Nav />

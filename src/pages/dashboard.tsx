@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
 import Layout from "./../components/Layout/index.logged"
-import "bootstrap/dist/css/bootstrap.css"
 import store from "./../store"
 import Loading from "./../components/Loading"
 import { connect } from "react-redux"

@@ -1,9 +1,10 @@
-import React, { useState, SyntheticEvent } from "react"
+import React, { useEffect, useState, SyntheticEvent } from "react"
 import { Container, Form, Button } from "react-bootstrap"
 import HandleLogin from "./../components/Auth/HandleLogin"
 import { LoginForm } from "./../interfaces/auth.interface"
 import Nav from "./../components/Navs"
-import 'bootstrap/dist/css/bootstrap.css';
+import { isLoggedIn } from "./../actions/auth"
+import { navigate } from "gatsby"
 
 export default () => {
   const [loginReq, setLoginReq] = useState<boolean>(false)
@@ -27,6 +28,10 @@ export default () => {
 
   const { email, password } = form
   const props = { email, password }
+
+  useEffect(() => {
+    if (isLoggedIn()) navigate("/dashboard")
+  }, [])
 
   return (
     <>
