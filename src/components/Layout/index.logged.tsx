@@ -4,6 +4,8 @@ import gql from "graphql-tag"
 import { useQuery } from "@apollo/react-hooks"
 import { getUser } from "./../../actions/auth"
 import Loading from "./../Loading"
+import store from "./../../store"
+import constants from "./../../config/constants"
 
 const IS_LOGGED = gql`
   query IsLogged($token: String!) {
@@ -28,10 +30,16 @@ const LoggedLayout = ({ children }: { children: any }) => {
     if (Object.keys(data).length) {
       if (!data.user.isCheck)
         navigate(`/user/not_confirm?email=${data.user.email}`)
+      const { userInfo } = constants
+      const { email, firstname, lastname } = data.user
+      store.dispatch({
+        type: userInfo.name,
+        payload: { email, firstname, lastname },
+      })
     } else if (error) {
       navigate("/login")
     }
-  })
+  }, [data])
 
   return !loading ? <div id="logged-layout">{children}</div> : <Loading />
 }
