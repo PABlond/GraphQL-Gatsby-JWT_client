@@ -1,0 +1,92 @@
+$dark: #23374d;
+$light: #fff;
+$blue: #1089ff;
+
+#dropdown-basic::after {
+  content: none !important;
+}
+
+body {
+  background: $dark;
+}
+
+#nav {
+  background: $blue;
+  color: $light;
+}
+
+// ****************************************
+// ****************************************
+//               Nav
+// ****************************************
+// ****************************************
+
+#nav {
+  .navbar-nav {
+    .nav-item {
+      a {
+        color: $light;
+      }
+
+      .nav-signup {
+        background: $light;
+        color: $dark !important;
+        border-radius: 0.25rem !important;
+        font-weight: 600;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .dropdown-menu {
+        a {
+          color: $dark;
+        }
+      }
+    }
+  }
+}
+// ****************************************
+// ****************************************
+//               Auth Container
+// ****************************************
+// ****************************************
+
+#auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    background: $light;
+    width: 80%;
+    padding: 3rem;
+
+    #auth-heading {
+      padding-bottom: 1rem;
+    }
+
+    button {
+      background: $blue;
+    }
+  }
+}
+
+// ****************************************
+// ****************************************
+//               Dashboard
+// ****************************************
+// ****************************************
+
+#logged-layout {
+  margin: 0 auto;
+
+  #logged-container {
+    background: $light;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
